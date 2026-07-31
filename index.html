@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <link rel="icon" type="image/png" href="assets/vradical-studio-icon.png">
+  <title>VRadical Studio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      background: #000;
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+    }
+
+    .teaser-icon {
+      display: block;
+      width: min(75vw, 75vh);
+      height: min(75vw, 75vh);
+      object-fit: contain;
+      filter: blur(clamp(20px, 2.8vmin, 32px)) brightness(.78) saturate(1.08);
+      transform: scale(1.04);
+      user-select: none;
+      pointer-events: none;
+      -webkit-user-drag: none;
+    }
+  </style>
+</head>
+<body>
+  <img
+    class="teaser-icon"
+    src="assets/vradical-studio-icon.png"
+    alt=""
+    aria-hidden="true"
+    draggable="false"
+  >
+</body>
+</html>
