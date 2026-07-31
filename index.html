@@ -25,13 +25,11 @@
       place-items: center;
     }
 
-    .manual-entry {
+    .teaser-frame {
       display: block;
       width: min(75vw, 75vh);
       height: min(75vw, 75vh);
       border-radius: 22%;
-      outline: 0;
-      cursor: pointer;
     }
 
     .teaser-icon {
@@ -41,32 +39,14 @@
       object-fit: contain;
       filter: blur(clamp(20px, 2.8vmin, 32px)) brightness(.78) saturate(1.08);
       transform: scale(1.04);
-      transition: filter 220ms ease, transform 220ms ease;
       user-select: none;
       pointer-events: none;
       -webkit-user-drag: none;
     }
-
-    .manual-entry:hover .teaser-icon,
-    .manual-entry:focus-visible .teaser-icon {
-      filter: blur(clamp(15px, 2.15vmin, 25px)) brightness(.92) saturate(1.16);
-      transform: scale(1.07);
-    }
-
-    .manual-entry:focus-visible {
-      outline: 3px solid #b8ff68;
-      outline-offset: 12px;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .teaser-icon {
-        transition: none;
-      }
-    }
   </style>
 </head>
 <body>
-  <a class="manual-entry" href="manual/" aria-label="Open the VRadical Studio user manual">
+  <div class="teaser-frame" aria-hidden="true">
     <img
       class="teaser-icon"
       src="assets/vradical-studio-icon.png"
@@ -74,6 +54,6 @@
       aria-hidden="true"
       draggable="false"
     >
-  </a>
+  </div>
 </body>
 </html>
