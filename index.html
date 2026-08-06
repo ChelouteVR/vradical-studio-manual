@@ -4,10 +4,29 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
-  <meta name="description" content="VRadical Studio documentation, privacy policy, and terms of use.">
+  <meta name="application-name" content="VRadical Studio">
+  <meta name="description" content="VRadical Studio is a desktop application for calibrating, stabilizing, editing, exporting, and publishing immersive VR video and photos on macOS and Windows.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="VRadical Studio">
+  <meta property="og:title" content="VRadical Studio">
+  <meta property="og:description" content="Professional VR video and photo calibration, stabilization, editing, export, and optional YouTube publishing for macOS and Windows.">
+  <meta property="og:url" content="https://cheloutevr.github.io/vradical-studio-manual/">
+  <meta property="og:image" content="https://cheloutevr.github.io/vradical-studio-manual/assets/vradical-studio-icon.png">
   <link rel="canonical" href="https://cheloutevr.github.io/vradical-studio-manual/">
   <link rel="icon" type="image/png" href="assets/vradical-studio-icon.png">
   <title>VRadical Studio</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "VRadical Studio",
+    "url": "https://cheloutevr.github.io/vradical-studio-manual/",
+    "image": "https://cheloutevr.github.io/vradical-studio-manual/assets/vradical-studio-icon.png",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "macOS, Windows",
+    "description": "VRadical Studio is a desktop application for calibrating, stabilizing, editing, exporting, and publishing immersive VR video and photos."
+  }
+  </script>
   <style>
     :root {
       --ink: #f5f8f3;
@@ -33,17 +52,18 @@
     .page {
       min-height: 100vh;
       display: grid;
-      grid-template-rows: 1fr auto;
+      grid-template-rows: auto auto;
     }
 
     main {
-      display: grid;
-      place-items: center;
       padding: clamp(36px, 7vw, 84px) 24px 46px;
-      text-align: center;
     }
 
-    .hero { width: min(720px, 100%); }
+    .hero {
+      width: min(760px, 100%);
+      margin: 0 auto;
+      text-align: center;
+    }
 
     .studio-icon {
       display: block;
@@ -89,6 +109,64 @@
     .manual-button:hover { transform: translateY(-2px); box-shadow: 0 20px 50px rgba(123, 247, 203, .2); }
     .manual-button:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
 
+    .purpose {
+      width: min(980px, 100%);
+      margin: clamp(62px, 9vw, 108px) auto 20px;
+      padding-top: clamp(42px, 6vw, 66px);
+      border-top: 1px solid var(--line);
+    }
+
+    .purpose-label {
+      margin: 0 0 9px;
+      color: var(--accent-2);
+      font-size: 11px;
+      font-weight: 850;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    .purpose h2 {
+      margin: 0;
+      font-size: clamp(32px, 5vw, 52px);
+      line-height: 1.05;
+      letter-spacing: -.045em;
+    }
+
+    .purpose-intro {
+      max-width: 850px;
+      margin: 18px 0 32px;
+      color: #c4cbc2;
+      font-size: clamp(17px, 2vw, 20px);
+      line-height: 1.65;
+    }
+
+    .purpose-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .purpose-card {
+      padding: 25px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, .025);
+    }
+
+    .purpose-card h3 {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 18px;
+    }
+
+    .purpose-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .purpose-card a { color: var(--accent); }
+
     footer {
       display: flex;
       flex-wrap: wrap;
@@ -103,6 +181,11 @@
     footer a { color: #b9c1b7; text-decoration: none; }
     footer a:hover { color: var(--accent); }
 
+    @media (max-width: 700px) {
+      .purpose-grid { grid-template-columns: 1fr; }
+      .purpose-card { padding: 21px; }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       .manual-button { transition: none; }
     }
@@ -114,8 +197,23 @@
       <section class="hero" aria-labelledby="page-title">
         <img class="studio-icon" src="assets/vradical-studio-icon.png" alt="VRadical Studio app icon">
         <h1 id="page-title">VRadical Studio</h1>
-        <p class="tagline">Professional VR video and photo processing for macOS and Windows.</p>
+        <p class="tagline">A desktop application for professional immersive video and photo processing on macOS and Windows.</p>
         <a class="manual-button" href="manual/">Open User Manual</a>
+      </section>
+      <section class="purpose" aria-labelledby="purpose-title">
+        <p class="purpose-label">What the application does</p>
+        <h2 id="purpose-title">Create finished immersive media from supported camera originals.</h2>
+        <p class="purpose-intro"><strong>VRadical Studio</strong> imports supported VR camera videos and photos, corrects stereo alignment, calibrates and stabilizes immersive footage, provides timeline editing and image controls, and exports finished VR media for viewing and publication.</p>
+        <div class="purpose-grid">
+          <article class="purpose-card">
+            <h3>Local media production</h3>
+            <p>Source media is processed on the user's computer. Studio provides camera-aware calibration, stabilization, stereo correction, color and image controls, audio processing, timeline editing, preview, and export. The <a href="manual/">User Manual</a> documents the complete workflow.</p>
+          </article>
+          <article class="purpose-card">
+            <h3>Optional YouTube publishing</h3>
+            <p>When a user chooses to connect YouTube, Studio requests Google authorization to identify the user's YouTube channel and upload an exported video with the title, description, category, visibility, scheduling, and other publication settings selected by that user. Google user data is not used for advertising or unrelated purposes. See the <a href="privacy/">Privacy Policy</a>.</p>
+          </article>
+        </div>
       </section>
     </main>
     <footer>
