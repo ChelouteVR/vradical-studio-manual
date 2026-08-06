@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="color-scheme" content="dark">
+  <meta name="application-name" content="VRadical Studio">
   <meta name="description" content="Complete VRadical Studio user manual for video, photo, calibration, Timeline, export, CLI, and DeoVR streaming.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="VRadical Studio User Manual">
@@ -14,6 +15,17 @@
   <link rel="canonical" href="https://studio.vradical.app/manual/">
   <link rel="icon" type="image/png" href="assets/logo.png">
   <title>VRadical Studio User Manual</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "VRadical Studio",
+    "url": "https://studio.vradical.app/manual/",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "macOS, Windows",
+    "description": "VRadical Studio is a desktop application for importing, calibrating, stabilizing, editing, exporting, and publishing immersive VR videos and photos."
+  }
+  </script>
   <style>
 :root {
   --ink: #f6f8f4;
@@ -149,6 +161,8 @@ figcaption span { color:var(--accent); letter-spacing:.13em; font-size:8px; font
 .code-shell > span { display:block; color:var(--accent); letter-spacing:.14em; font-size:8px; font-weight:900; padding:11px 14px; border-bottom:1px solid var(--line); }
 pre { margin:0; padding:18px; overflow-x:auto; color:#d9ffae; font:13px/1.65 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; }
 .manual-footer { max-width:1120px; margin:0 auto; padding:26px 34px 70px; color:#717971; font-size:12px; display:flex; justify-content:space-between; gap:20px; border-top:1px solid var(--line); }
+.manual-footer nav { display:flex; flex-wrap:wrap; gap:16px; }
+.manual-footer a { color:var(--accent); text-underline-offset:3px; }
 .no-results { display:none; max-width:780px; margin:30px auto 70px; padding:40px; border:1px solid var(--line); border-radius:20px; text-align:center; color:var(--muted); }
 @media (max-width: 1100px) {
   :root { --sidebar:250px; }
@@ -215,7 +229,7 @@ pre { margin:0; padding:18px; overflow-x:auto; color:#d9ffae; font:13px/1.65 ui-
           <span class="eyebrow">Complete guide - 31 July 2026</span>
           <img class="hero-logo" src="assets/logo.png" alt="VRadical Studio logo">
           <h1>VRadical <span>Studio</span></h1>
-          <p class="hero-copy">The modern field guide to camera-native VR180: import, calibration, stabilization, color, photos, Timeline editing, export, publishing, CLI, and local DeoVR streaming.</p>
+          <p class="hero-copy"><strong>VRadical Studio is a desktop application for macOS and Windows</strong> that imports, calibrates, stabilizes, edits, exports, and publishes immersive VR videos and photos.</p>
           <div class="hero-meta"><span>Version 1.0.0</span><span>macOS + Windows</span><span>GPU-first</span><span>English edition</span></div>
         </div>
         <div class="hero-visual"><div class="hero-screen"><img src="assets/screenshots/02-main-workspace.png" alt="VRadical Studio main workspace"></div></div>
@@ -347,7 +361,7 @@ pre { margin:0; padding:18px; overflow-x:auto; color:#d9ffae; font:13px/1.65 ui-
               <div class="chapter-body"><h2 id="global-shortcuts">Global shortcuts</h2><div class="table-wrap"><table><thead><tr><th>macOS</th><th>Windows</th><th>Action</th></tr></thead><tbody><tr><td>Cmd+O</td><td>Ctrl+O</td><td>Open supported files</td></tr><tr><td>Cmd+,</td><td>File &gt; Preferences...</td><td>Open Settings</td></tr><tr><td>Cmd+Q</td><td>Ctrl+Q</td><td>Quit Studio</td></tr></tbody></table></div><h2 id="timeline-shortcuts">Timeline shortcuts</h2><div class="table-wrap"><table><thead><tr><th>Shortcut</th><th>Action</th></tr></thead><tbody><tr><td>Esc</td><td>Leave Cut mode</td></tr><tr><td>Cmd/Ctrl+Z</td><td>Undo</td></tr><tr><td>Cmd/Ctrl+Shift+Z or Cmd/Ctrl+Y</td><td>Redo</td></tr><tr><td>C or B</td><td>Split selected video at playhead</td></tr><tr><td>Delete or Backspace</td><td>Remove selection</td></tr><tr><td>M</td><td>Mute selected video</td></tr><tr><td>+ or = / -</td><td>Zoom in / out</td></tr><tr><td>Left / Right</td><td>Move one frame</td></tr><tr><td>Shift+Left / Shift+Right</td><td>Move ten frames</td></tr><tr><td>Cmd/Ctrl+Left / Cmd/Ctrl+Right</td><td>Move one second</td></tr><tr><td>Up / Down</td><td>Previous / next edit point</td></tr><tr><td>Home / End</td><td>Timeline start / end</td></tr><tr><td>J / K / L</td><td>Reverse shuttle / stop / forward shuttle</td></tr><tr><td>I / O</td><td>Mark In / Out</td></tr><tr><td>Alt+I / Alt+O</td><td>Clear In / Out</td></tr></tbody></table></div><h2 id="final-export-checklist">Final export checklist</h2><ul class="check-list"><li><span class="check-marker">CHECK</span><span class="check-text">The correct camera/profile appears in File Properties.</span></li><li><span class="check-marker">CHECK</span><span class="check-text">Calibration is loaded and both eyes align in near, mid, and far regions.</span></li><li><span class="check-marker">CHECK</span><span class="check-text">Sensor rotations and eye order match the final SBS viewer convention.</span></li><li><span class="check-marker">CHECK</span><span class="check-text">Stabilization behaves correctly at the start, fastest motion, and end.</span></li><li><span class="check-marker">CHECK</span><span class="check-text">Yaw, pitch, and focal distance do not reveal unintended source borders.</span></li><li><span class="check-marker">CHECK</span><span class="check-text">LUT and tonal controls look consistent in both eyes.</span></li><li><span class="check-marker">CHECK</span><span class="check-text">Audio mode and monitoring volume are intentional.</span></li><li><span class="check-marker">CHECK</span><span class="check-text">In/Out points or Timeline duration are correct.</span></li><li><span class="check-marker">CHECK</span><span class="check-text">Projection, resolution, frame rate, codec, depth, bitrate, and metadata match the destination.</span></li><li><span class="check-marker">CHECK</span><span class="check-text">A short sample export has been checked in the target player/headset.</span></li><li><span class="check-marker">CHECK</span><span class="check-text">The final output folder has enough space and the queue is monitored through completion.</span></li></ul><h2 id="fast-glossary">Fast glossary</h2><div class="table-wrap"><table><thead><tr><th>Term</th><th>Definition</th></tr></thead><tbody><tr><td>CFA</td><td>Color filter array data used by eligible processed DNG output.</td></tr><tr><td>D3D11</td><td>Direct3D 11, the required native Windows GPU backend.</td></tr><tr><td>EAC</td><td>Equi-angular cubemap camera layout used by supported GoPro profiles.</td></tr><tr><td>HLS</td><td>HTTP Live Streaming, used for the local DeoVR stream.</td></tr><tr><td>LUT</td><td>A 3D color lookup table stored as a .cube file.</td></tr><tr><td>Mod profile</td><td>Persistent physical camera setup for sensor rotations, eye order, and focal-distance defaults.</td></tr><tr><td>P010</td><td>10-bit 4:2:0 YUV GPU format used by high-depth native paths.</td></tr><tr><td>SBS</td><td>Side-by-side stereo output, left eye followed by right eye.</td></tr><tr><td>VR180</td><td>A stereoscopic 180-degree immersive view.</td></tr></tbody></table></div><aside class="callout tip"><span class="callout-label">TIP</span><h3>You are ready</h3><p>Start with a short calibrated clip, make one intentional change at a time, and check the result in the final viewer. Once that loop feels natural, the same workflow scales cleanly to photos, mixed-camera Timelines, batch jobs, and headset streaming.</p></aside></div>
             </article>
     <div class="no-results"><h2>No matching chapter</h2><p>Try a camera name, calibration, export, Timeline, photo, CLI, or DeoVR.</p></div>
-    <footer class="manual-footer"><span>VRadical Studio User Manual - Version 1.0.0 - 31 July 2026</span><span>Made for creators who would rather be shooting.</span></footer>
+    <footer class="manual-footer"><span>VRadical Studio User Manual - Version 1.0.0 - 31 July 2026</span><nav aria-label="VRadical Studio legal links"><a href="../">VRadical Studio</a><a href="../privacy/">Privacy Policy</a><a href="../terms/">Terms of Use</a></nav></footer>
   </main>
   <script>
 const sidebar = document.querySelector('.sidebar');
